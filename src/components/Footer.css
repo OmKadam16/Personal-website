@@ -1,0 +1,205 @@
+.footer {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(72px, 14vw, 160px) clamp(16px, 3vw, 32px) 0;
+  box-sizing: border-box;
+}
+
+.footer-threads {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ---------- Centered CTA over the threads ---------- */
+.footer-cta {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+  text-align: center;
+  padding-top: clamp(24px, 3vw, 40px);
+  padding-bottom: clamp(40px, 6vw, 72px);
+  border-top: 1px solid #232323;
+  margin-top: -50px;
+}
+
+.footer-cta-line {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--white);
+  font-size: clamp(22px, 3.2vw, 44px);
+  line-height: 1.15;
+}
+
+/* Hero-style contact button */
+.footer-contact {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(180deg, #ff9a5c 0%, #ff5a1f 55%, #e8480f 100%);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 15px;
+  padding: 14px 30px;
+  border-radius: 22px 0 22px 0;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  text-decoration: none;
+  white-space: nowrap;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.footer-contact:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 32px rgba(255, 90, 31, 0.35);
+}
+
+.footer-contact-icon {
+  width: 17px;
+  height: 17px;
+}
+
+/* ---------- Bottom bar ---------- */
+.footer-bar {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: calc(clamp(32px, 4vw, 48px) + 100px) 0 clamp(32px, 4vw, 48px);
+}
+
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.footer-name {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--white);
+}
+
+.footer-tagline {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 13px;
+  color: var(--text-soft);
+}
+
+.footer-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-socials {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.footer-social-link {
+  color: rgba(255, 255, 255, 0.5);
+  transition: color 0.25s ease;
+  display: flex;
+}
+
+.footer-social-link:hover {
+  color: var(--orange);
+}
+
+.footer-top {
+  background: none;
+  border: none;
+  padding: 0;
+  color: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  display: flex;
+  transition: color 0.25s ease;
+}
+
+.footer-top:hover {
+  color: var(--orange);
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 700px) {
+  .footer-cta-line {
+    max-width: 300px;
+  }
+
+  .footer-bar {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-actions {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* ---------- Tablet + desktop: bigger everything, CTA is the star ---------- */
+@media (min-width: 701px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: clamp(380px, 44vw, 640px);
+    padding-top: clamp(48px, 6vw, 96px);
+    padding-left: calc(clamp(16px, 3vw, 32px) + clamp(24px, calc((100vw - 700px) * 0.24), 150px));
+    padding-right: calc(clamp(16px, 3vw, 32px) + clamp(24px, calc((100vw - 700px) * 0.24), 150px));
+  }
+
+  /* center the CTA vertically in the threads zone, bar pinned at bottom */
+  .footer-cta {
+    gap: 30px;
+    padding-bottom: 0;
+  }
+
+  .footer-contact {
+    font-size: clamp(16px, 1.4vw, 20px);
+    padding: clamp(16px, 1.7vw, 22px) clamp(36px, 3.4vw, 54px);
+    border-radius: 26px 0 26px 0;
+  }
+
+  .footer-contact-icon {
+    width: clamp(18px, 1.5vw, 22px);
+    height: clamp(18px, 1.5vw, 22px);
+  }
+
+  .footer-name {
+    font-size: clamp(18px, 1.5vw, 22px);
+  }
+
+  .footer-tagline {
+    font-size: clamp(14px, 1.1vw, 16px);
+  }
+
+  .footer-socials {
+    gap: 20px;
+  }
+
+  .footer-social-link svg {
+    width: clamp(22px, 1.9vw, 28px);
+    height: clamp(22px, 1.9vw, 28px);
+  }
+
+  .footer-top svg {
+    width: clamp(22px, 1.9vw, 26px);
+    height: clamp(22px, 1.9vw, 26px);
+  }
+}

@@ -1,0 +1,235 @@
+.section-nav-wrap {
+  display: none;
+}
+
+@media (min-width: 701px) {
+  .section-nav-wrap {
+    display: block;
+    position: sticky;
+    top: 14px;
+    z-index: 20;
+    margin-top: 56px;
+    padding: 0 clamp(16px, 3vw, 32px);
+  }
+}
+
+/* ── Desktop glass pill nav ── */
+.section-nav-bar {
+  display: none;
+}
+
+@media (min-width: 701px) {
+  .section-nav-bar {
+    display: flex;
+    justify-content: center;
+    padding: 6px;
+    border-radius: 999px;
+    max-width: fit-content;
+    margin: 0 auto;
+
+    /* Glass base layer */
+    background: rgba(14, 14, 14, 0.65);
+    backdrop-filter: blur(18px) saturate(180%);
+    -webkit-backdrop-filter: blur(18px) saturate(180%);
+
+    /* Inner highlight + border + shadow */
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.07),
+      0 4px 24px rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+
+    transform: translateZ(0);
+    will-change: background, backdrop-filter, box-shadow;
+    transition:
+      background 0.35s ease,
+      backdrop-filter 0.35s ease,
+      box-shadow 0.35s ease;
+  }
+
+  /* Scrolled state: more opaque + sharper */
+  .is-scrolled .section-nav-bar {
+    background: rgba(14, 14, 14, 0.82);
+    backdrop-filter: blur(28px) saturate(200%);
+    -webkit-backdrop-filter: blur(28px) saturate(200%);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.06),
+      0 8px 40px rgba(0, 0, 0, 0.5);
+  }
+
+  .section-nav-bar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .section-nav-bar li a {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 18px;
+    border-radius: 999px;
+    color: rgba(255, 255, 255, 0.5);
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: clamp(13px, 0.9vw, 15px);
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+    transition: color 0.25s ease;
+    z-index: 1;
+  }
+
+  /* Glass highlight on hover */
+  .section-nav-bar li a::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 999px;
+    background: transparent;
+    transition: background 0.25s ease;
+    z-index: -1;
+  }
+
+  .section-nav-bar li a:hover {
+    color: rgba(255, 255, 255, 0.85);
+  }
+
+  .section-nav-bar li a:hover::before {
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  /* Active indicator: glowing orange pill */
+  .section-nav-bar li.is-active a {
+    color: var(--white);
+  }
+
+  .section-nav-bar li.is-active a::before {
+    background: rgba(255, 90, 31, 0.12);
+    box-shadow:
+      inset 0 0 0 1px rgba(255, 90, 31, 0.15),
+      0 0 24px rgba(255, 90, 31, 0.08);
+  }
+
+  .section-nav-bar li.is-active a:hover::before {
+    background: rgba(255, 90, 31, 0.16);
+  }
+}
+
+/* ── Mobile vertical glass nav ── */
+.section-nav-list {
+  position: relative;
+  width: 100%;
+  border-radius: 24px;
+  padding: 20px 0;
+
+  background: rgba(14, 14, 14, 0.65);
+  backdrop-filter: blur(18px) saturate(180%);
+  -webkit-backdrop-filter: blur(18px) saturate(180%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.07),
+    0 4px 24px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+
+  transform: translateZ(0);
+  will-change: background, backdrop-filter, box-shadow;
+  transition:
+    background 0.35s ease,
+    backdrop-filter 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.is-scrolled .section-nav-list {
+  background: rgba(14, 14, 14, 0.82);
+  backdrop-filter: blur(28px) saturate(200%);
+  -webkit-backdrop-filter: blur(28px) saturate(200%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    0 8px 40px rgba(0, 0, 0, 0.5);
+}
+
+.section-nav-line {
+  position: absolute;
+  top: 30px;
+  bottom: 30px;
+  left: 34px;
+  width: 2px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.section-nav-line::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 12%;
+  background: var(--orange);
+  box-shadow: 0 0 10px rgba(255, 90, 31, 0.4);
+}
+
+.section-nav-list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.section-nav-list li a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 0 12px 24px;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 14px;
+  transition: color 0.25s ease;
+}
+
+.section-nav-list li a:hover {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.section-nav-dot {
+  position: relative;
+  z-index: 1;
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.35);
+  flex-shrink: 0;
+  transition: background 0.25s ease, box-shadow 0.25s ease;
+}
+
+.section-nav-list li.is-active a {
+  color: var(--white);
+}
+
+.section-nav-list li.is-active .section-nav-dot {
+  background: var(--orange);
+  box-shadow: 0 0 12px rgba(255, 90, 31, 0.6);
+}
+
+/* ── backdrop-filter fallback ── */
+@supports not ((backdrop-filter: blur(18px)) or (-webkit-backdrop-filter: blur(18px))) {
+  .section-nav-bar,
+  .section-nav-list {
+    background: rgba(10, 10, 10, 0.95);
+  }
+
+  .is-scrolled .section-nav-bar,
+  .is-scrolled .section-nav-list {
+    background: rgba(10, 10, 10, 0.98);
+  }
+}
+
+/* Tablet + desktop: hide mobile nav */
+@media (min-width: 701px) {
+  .section-nav-list {
+    display: none;
+  }
+}
