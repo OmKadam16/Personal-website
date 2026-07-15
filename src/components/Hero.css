@@ -79,15 +79,10 @@
   transform: translateY(-2px);
 }
 
-.contact-btn-wrap {
-  position: relative;
-  display: inline-flex;
-}
-
 .contact-btn {
-  position: relative;
   display: inline-flex;
   align-items: center;
+  gap: 10px;
   background: linear-gradient(180deg, #ff9a5c 0%, #ff5a1f 55%, #e8480f 100%);
   color: var(--white);
   font-family: var(--font-body);
@@ -97,6 +92,15 @@
   border-radius: 22px 0 22px 0;
   border: 1px solid rgba(255, 255, 255, 0.25);
   white-space: nowrap;
+  text-decoration: none;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.contact-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 32px rgba(255, 90, 31, 0.35);
 }
 
 .hero-content {

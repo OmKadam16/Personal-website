@@ -1,5 +1,6 @@
 import { Fragment } from 'react'
 import { useState } from 'react'
+import { motion } from 'framer-motion'
 import ExperienceShowcase from './ExperienceShowcase'
 import ShinyText from './ShinyText'
 import './Experience.css'
@@ -45,7 +46,14 @@ function Experience() {
   const [expandedIndex, setExpandedIndex] = useState(null)
 
   return (
-    <section className="experience" id="experience">
+    <motion.section
+      className="experience"
+      id="experience"
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-80px" }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+    >
       <div className="experience-body">
          <h2 className="experience-heading"><ShinyText text="Experience" color="#b5b5b5" shineColor="#ffffff" speed={4} spread={150} /></h2>
 
@@ -107,7 +115,7 @@ function Experience() {
           })}
         </div>
       </div>
-    </section>
+    </motion.section>
   )
 }
 

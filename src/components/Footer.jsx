@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import { ArrowUp, Mail } from 'lucide-react'
 import Threads from './Threads'
 import './Footer.css'
@@ -38,7 +39,13 @@ function Footer() {
   }
 
   return (
-    <footer className="footer">
+    <motion.footer
+      className="footer"
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-80px" }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+    >
       <div className="footer-threads" aria-hidden="true">
         <Threads
           color={[1, 0.35, 0.12]}
@@ -91,7 +98,7 @@ function Footer() {
           </button>
         </div>
       </div>
-    </footer>
+    </motion.footer>
   )
 }
 

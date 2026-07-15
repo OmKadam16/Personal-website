@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import whoMePhoto from '../assets/whoMe.jpg'
 import TiltedCard from './TiltedCard'
 import ShinyText from './ShinyText'
@@ -5,7 +6,14 @@ import './About.css'
 
 function About() {
   return (
-    <section className="about" id="about">
+    <motion.section
+      className="about"
+      id="about"
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-80px" }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+    >
       <div className="about-body">
         <div className="about-content">
           <h2 className="about-heading"><ShinyText text="About me" color="#b5b5b5" shineColor="#ffffff" speed={4} spread={150} /></h2>
@@ -40,7 +48,7 @@ function About() {
           />
         </div>
       </div>
-    </section>
+    </motion.section>
   )
 }
 

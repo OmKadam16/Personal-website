@@ -177,7 +177,14 @@ function Education() {
   const visibleCerts = showAllCerts ? certifications : certifications.slice(0, 4)
 
   return (
-    <section className="education" id="education">
+    <motion.section
+      className="education"
+      id="education"
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-80px" }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+    >
       <h2 className="education-heading">
         <ShinyText
           text="Education"
@@ -380,7 +387,7 @@ function Education() {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   )
 }
 

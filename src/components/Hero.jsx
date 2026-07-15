@@ -1,4 +1,5 @@
 import heroPortrait from '../assets/hero-portrait.png'
+import { Mail } from 'lucide-react'
 import './Hero.css'
 
 const socialLinks = [
@@ -53,8 +54,9 @@ function Hero() {
             </a>
           ))}
         </div>
-        <a className="contact-btn-wrap" href="mailto:om4kadam@gmail.com">
-          <span className="contact-btn">Contact me</span>
+        <a className="contact-btn" href="mailto:om4kadam@gmail.com">
+          <Mail size={16} />
+          Contact me
         </a>
       </header>
 

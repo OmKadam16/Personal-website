@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import InfiniteMenu from './InfiniteMenu'
 import ShinyText from './ShinyText'
 import './Projects.css'
@@ -32,14 +33,21 @@ const projects = [
 
 function Projects() {
   return (
-    <section className="projects" id="projects">
+    <motion.section
+      className="projects"
+      id="projects"
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-80px" }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+    >
       <h2 className="projects-heading"><ShinyText text="Projects" color="#b5b5b5" shineColor="#ffffff" speed={4} spread={150} /></h2>
 
       <div className="projects-menu-wrap">
         <InfiniteMenu items={projects} />
         <p className="projects-hint">Drag to explore</p>
       </div>
-    </section>
+    </motion.section>
   )
 }
 
