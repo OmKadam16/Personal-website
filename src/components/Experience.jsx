@@ -21,11 +21,11 @@ const roles = [
     title: 'Summer SWE Program',
     company: 'ThinkNeuro',
     dates: 'Jun 2026 — Present',
-    description: 'Software engineering program focused on neurotechnology.',
+    description: 'Intensive SWE practicum focused on Git, portfolio development, and team-based capstone projects.',
     details: [
-      'Built data processing pipelines for EEG signal analysis in Python',
-      'Implemented real-time visualization dashboards for neural data streams',
-      'Contributed to open-source BCI tools used in neuroscience research labs',
+      'Mastered Git commands and version control workflows through hands-on collaborative exercises',
+      'Built and deployed a personal portfolio website showcasing technical projects and design skills',
+      'Collaborated in an agile team environment on a capstone project simulating real-world software engineering',
     ],
   },
 ];

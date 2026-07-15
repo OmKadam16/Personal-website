@@ -25,8 +25,8 @@ const experiences = [
     title: 'Summer SWE Program',
     tagline: 'ThinkNeuro · Jun 2026 — Present',
     paragraphs: [
-      'Software engineering program focused on neurotechnology — building data processing pipelines for EEG signal analysis in Python.',
-      'Implementing real-time visualization dashboards for neural data streams and contributing to open-source BCI tools used in neuroscience research labs.',
+      'Intensive software engineering practicum focused on real-world development workflows — mastering Git version control, building personal portfolio websites from scratch, and collaborating in agile team environments.',
+      'Working on a team-based capstone project that simulates the full software development lifecycle, from sprint planning and code review to deployment and delivery.',
     ],
     imageUrl: expThinkneuro,
     liveUrl: null,
