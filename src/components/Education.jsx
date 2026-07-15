@@ -149,13 +149,8 @@ const certifications = [
   },
 ]
 
-// Live progress through the in-progress degree (Aug 2025 → May 2027)
-const AS_START = new Date('2025-08-01').getTime()
-const AS_END = new Date('2027-05-31').getTime()
-const asProgress = Math.min(
-  1,
-  Math.max(0, (Date.now() - AS_START) / (AS_END - AS_START))
-)
+// Halfway through Cypress College (Aug 2025 → May 2027)
+const asProgress = 0.5
 
 // Path fill: completed segments are full, the current one fills with progress
 const SEGMENTS = milestones.length - 1

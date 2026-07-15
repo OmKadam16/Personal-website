@@ -28,19 +28,7 @@ const roles = [
       'Contributed to open-source BCI tools used in neuroscience research labs',
     ],
   },
-  {
-    title: 'Freelance Designer & Illustrator',
-    company: 'Self-Employed (Fiverr & Direct Clients)',
-    dates: '2023 — Present',
-    description:
-      'Delivered brand identity, packaging, and web assets for 10+ startups and small businesses.',
-    details: [
-      'Designed complete brand identities including logos, color systems, and typography',
-      'Created packaging and web assets that improved client conversion rates',
-      'Managed end-to-end design process from concept sketches to final deliverables',
-    ],
-  },
-]
+];
 
 function Experience() {
   const [expandedIndex, setExpandedIndex] = useState(null)

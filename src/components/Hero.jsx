@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import heroPortrait from '../assets/hero-portrait.png'
 import { Mail } from 'lucide-react'
 import './Hero.css'
@@ -34,7 +35,12 @@ const socialLinks = [
 
 function Hero() {
   return (
-    <section className="hero">
+    <motion.section
+      className="hero"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.7, ease: 'easeOut' }}
+    >
       <div className="hero-bg">
         <img className="hero-portrait" src={heroPortrait} alt="" />
       </div>
@@ -78,7 +84,7 @@ function Hero() {
           <p>Biomed Engineer Student</p>
         </div>
       </div>
-    </section>
+    </motion.section>
   )
 }
 
