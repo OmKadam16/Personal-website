@@ -44,10 +44,6 @@
 /* Mobile: the fill is vertical, so neutralize framer's scaleX and animate
    height with a CSS keyframe instead */
 @media (max-width: 700px) {
-  .edu-nodes {
-    flex-direction: column-reverse;
-  }
-
   .edu-path .edu-path-fill {
     top: auto;
     bottom: 0;
@@ -585,7 +581,7 @@
   }
 
   .edu-nodes {
-    flex-direction: row;
+    flex-direction: row-reverse;
     align-items: flex-start;
     justify-content: space-between;
     gap: clamp(24px, 4vw, 56px);

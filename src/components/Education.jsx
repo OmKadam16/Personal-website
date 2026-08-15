@@ -18,28 +18,15 @@ import certUX from '../assets/Certs/Foundations of User Expereince Design (Googl
 
 const milestones = [
   {
-    id: 'prodigy',
-    school: 'Prodigy Public School',
-    credential: 'Class 9 & 10 — India',
-    dates: '2021 — 2023',
-    note: 'Where the curiosity started.',
-    status: 'done',
+    id: 'bs',
+    school: 'University Transfer',
+    credential: 'B.S. — Transfer Track',
+    dates: 'Target 2027',
+    note: 'Toward computational neuroscience.',
+    status: 'next',
     details: [
-      'Completed freshman and sophomore year (Class 9 & 10) in India',
-      'Built early foundations in science and mathematics',
-      'Moved to the United States after Class 10',
-    ],
-  },
-  {
-    id: 'hs',
-    school: 'Cypress High School',
-    credential: 'High School Diploma',
-    dates: 'May 2025',
-    note: 'Junior & senior year in the U.S.',
-    status: 'done',
-    details: [
-      'Completed junior and senior year after moving from India',
-      'Graduated May 2025',
+      'Transferring toward a B.S. after completing the A.S.',
+      'Long-term: grad school in computational neuroscience',
     ],
   },
   {
@@ -56,15 +43,28 @@ const milestones = [
     ],
   },
   {
-    id: 'bs',
-    school: 'University Transfer',
-    credential: 'B.S. — Transfer Track',
-    dates: 'Target 2027',
-    note: 'Toward computational neuroscience.',
-    status: 'next',
+    id: 'hs',
+    school: 'Cypress High School',
+    credential: 'High School Diploma',
+    dates: 'May 2025',
+    note: 'Junior & senior year in the U.S.',
+    status: 'done',
     details: [
-      'Transferring toward a B.S. after completing the A.S.',
-      'Long-term: grad school in computational neuroscience',
+      'Completed junior and senior year after moving from India',
+      'Graduated May 2025',
+    ],
+  },
+  {
+    id: 'prodigy',
+    school: 'Prodigy Public School',
+    credential: 'Class 9 & 10 — India',
+    dates: '2021 — 2023',
+    note: 'Where the curiosity started.',
+    status: 'done',
+    details: [
+      'Completed freshman and sophomore year (Class 9 & 10) in India',
+      'Built early foundations in science and mathematics',
+      'Moved to the United States after Class 10',
     ],
   },
 ]
