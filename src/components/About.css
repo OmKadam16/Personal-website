@@ -52,6 +52,13 @@
   overflow: hidden;
 }
 
+/* Phone: shift the photo block slightly left without changing its size */
+@media (max-width: 700px) {
+  .about-photo {
+    transform: translateX(-18px);
+  }
+}
+
 /* Shared tablet + desktop */
 @media (min-width: 701px) {
   .about {
